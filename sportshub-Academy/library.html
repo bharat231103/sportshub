@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <style>
+       .info{
+     font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    line-height: 32px;
+    color: #1e1e1e;
+    font-weight: 430;
+    letter-spacing: 1px;
+    margin-bottom: 13px;
+       }
+
+       .co-info{
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        margin: 50px;
+       }
+       table {
+              border-collapse: collapse;
+              width: 70%;
+            }
+          
+            th, td {
+              border: 1px solid black;
+              padding: 8px;
+              text-align: left;
+            }
+          
+            th {
+              background-color: #f2f2f2;
+            }
+          
+            tr:nth-child(even) {
+              background-color: #f2f2f2;
+            }
+          
+            tr:hover {
+              background-color: #ddd;
+            }
+    </style>
+<body>
+  <img src="{% static 'images/library.jpg' %}" alt="Your Image" style="background-size: 1180px 720px;">
+    <div class="infromation">
+    <p class="info">Libraries are vital institutions that provide access to knowledge, support learning and research, and serve as community hubs. <br> SHTA Library offers a wide range of resources, programs, and services that contribute to education, culture, and the dissemination of information in society. <br> Libraries continue to adapt and innovate in response to the evolving needs of their patrons in an increasingly digital world. </p>
+    <div class="co-info">
+        <h1> Timing & Charges</h1>
+    </div>
+
+    <div class="tab-info">
+        <table>
+            <thead>
+              <tr>
+                <th colspan="2">DAYS</th>   
+                <th colspan="2">TIMING</th>
+                <th colspan="2">PACKAGES</th>
+                <th colspan="2">CHARGES</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">Mon - Sun</td>
+                    <td colspan="2">7.00 am - 12.00 Midnight</td>
+                    <td colspan="2"> 3 MONTHS</td>
+                    <td colspan="2"> 1500</td>  
+                  </tr>
+                  <tr>
+                    <td colspan="2"></td>
+                    <td colspan="2"></td>
+                    <td colspan="2"> 6 MONTHS</td>
+                    <td colspan="2"> 2500</td>  
+                  </tr>
+                  <tr>
+                    <td colspan="2"></td>
+                    <td colspan="2"></td>
+                    <td colspan="2"> 1 YEAR</td>
+                    <td colspan="2"> 5000</td>  
+                  </tr>
+            </tbody>
+          </table>
+    </div>
+
+
+        </table>
+    </div>
+{% endblock %}

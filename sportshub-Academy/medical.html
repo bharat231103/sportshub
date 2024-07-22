@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <style>
+       .info{
+     font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    line-height: 32px;
+    color: #1e1e1e;
+    font-weight: 430;
+    letter-spacing: 1px;
+    margin-bottom: 13px;
+       }
+
+       .co-info{
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        margin: 50px;
+       }
+    </style>
+<body>
+    <img src="{% static 'images/medical.jpg' %}" alt="Your Image" style="background-size: 1180px 720px;">
+    <div class="infromation">
+    <p class="info"> SHTA Medical Cell is a crucial resource for addressing medical emergencies and providing initial medical care. <br>These facilities are equipped with necessary supplies, staffed by qualified personnel, and designed to offer a safe and private environment for patients. <br>Properly maintained and well-functioning medical room facilities contribute to the health and safety of individuals in various settings. </p>
+    
+{% endblock %}

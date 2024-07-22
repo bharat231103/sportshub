@@ -1,0 +1,688 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .info{
+   font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  line-height: 32px;
+  color: #1e1e1e;
+  font-weight: 430;
+  letter-spacing: 1px;
+  margin-bottom: 13px;
+     }
+
+     .co-info{
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      margin: 50px;
+     }
+     table {
+            border-collapse: collapse;
+            width: 70%;
+          }
+        
+          th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+          }
+        
+          th {
+            background-color: #f2f2f2;
+          }
+        
+          tr:nth-child(even) {
+            background-color: #f2f2f2;
+          }
+        
+          tr:hover {
+            background-color: #ddd;
+          }
+  </style>
+
+<img src="{% static 'images/cricket1.jpg' %}" alt="Your Image" style="background-size: 1180px 720px;">
+<div class="infromation">
+<p class="info">Cricket is a globally beloved sport with various formats, each offering its unique characteristics and excitement.<br> It involves batting, bowling, and fielding, and is known for its international and domestic competitions, passionate fans, and cultural significance in many countries.<br> Cricket offers a captivating blend of skill, strategy, and entertainment.<br></p>
+</div>
+
+<div class="co-info">
+    <h1> Coaching Timing </h1>
+</div>
+
+<div class="tab-info">
+    <table>
+        <thead>
+          <tr>
+            <th colspan="2">ACTIVITY</th>   
+            <th colspan="2">MORNING</th>
+            <th colspan="2">EVENING</th>
+            <th colspan="2">AGE</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">YEARLY</td>
+                <td colspan="2">7.00-9.00</td>
+                <td colspan="2">4.00-6.00</td>
+                <td colspan="2">7 yrs & above</td>  
+              </tr>
+          <tr>
+            <td colspan="2"> HALF YEARLY</td>
+            <td colspan="2">7.00-9.00</td>
+            <td colspan="2">4.00-6.00</td>
+            <td colspan="2">7 yrs & above</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+
+<div class="co-info">
+    <h1> Coaching Charges </h1>
+    <table>
+        <thead>
+            <tr>
+              <th colspan="2">ACTIVITY</th>   
+              <th colspan="2">FEES</th>
+              <th colspan="2">AGE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td colspan="2">YEARLY</td>
+                <td colspan="2"> 12000</td>
+                <td colspan="2">7 yrs & above</td>  
+              </tr>
+          <tr>
+            <td colspan="2"> HALF YEARLY</td>
+            <td colspan="2"> 7000</td>
+            <td colspan="2">7 yrs & above</td>
+          </tr>
+        </tbody>
+
+    </table>
+</div>
+
+<body>
+    <img src="{% static 'images/football.jpg' %}" alt="Your Image" style="background-size: 1180px 720px;">
+      <div class="infromation">
+      <p class="info"> Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal.<br> Unqualified, the word football normally means the form of football that is the most popular where the word is used. <br>Sports commonly called football include association football (known as soccer in Australia, Canada, South Africa,the United States, and sometimes in Ireland and New Zealand); <br>Australian rules football; Gaelic football;  gridiron football (specifically American football, Arena football, or Canadian football); International rules football; rugby league football; and rugby union football. <br>These various forms of football share, to varying degrees, common origins and are known as "football codes".</p>
+      </div>
+  
+      <div class="co-info">
+          <h1> Coaching Timing </h1>
+      </div>
+  
+      <div class="tab-info">
+          <table>
+              <thead>
+                <tr>
+                  <th colspan="2">ACTIVITY</th>   
+                  <th colspan="2">MORNING</th>
+                  <th colspan="2">EVENING</th>
+                  <th colspan="2">AGE</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td colspan="2">YEARLY</td>
+                      <td colspan="2">7.00-9.00</td>
+                      <td colspan="2">4.00-6.00</td>
+                      <td colspan="2">7 yrs & above</td>  
+                    </tr>
+                <tr>
+                  <td colspan="2"> HALF YEARLY</td>
+                  <td colspan="2">7.00-9.00</td>
+                  <td colspan="2">4.00-6.00</td>
+                  <td colspan="2">7 yrs & above</td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+  
+  
+      <div class="co-info">
+          <h1> Coaching Charges </h1>
+          <table>
+              <thead>
+                  <tr>
+                    <th colspan="2">ACTIVITY</th>   
+                    <th colspan="2">FEES</th>
+                    <th colspan="2">AGE</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                      <td colspan="2">YEARLY</td>
+                      <td colspan="2"> 12000</td>
+                      <td colspan="2">7 yrs & above</td>  
+                    </tr>
+                <tr>
+                  <td colspan="2"> HALF YEARLY</td>
+                  <td colspan="2"> 7000</td>
+                  <td colspan="2">7 yrs & above</td>
+                </tr>
+              </tbody>
+  
+          </table>
+      </div>
+
+
+      <img src="{% static 'images/baketball.jpg' %}" alt="Your Image" style="background-size: 1180px 720px;">
+    <div class="infromation">
+    <p class="info">Basketball is a team sport where one team, usually consisting of five players in each team, play against each other on a rectangular court. <br>The objective is to get the ball through a hoop mounted high on a backboard on the opponent's side of the court, while preventing the opponent from shooting it into your team's hoop. <br>It is a very popular sport worldwide, played with a round and usually orange(orange-brown) ball that <br> Basketball players mainly use skills such as dribbling, shooting, running, and jumping. Each made basket is worth two points, while a basket made from beyond the three-point line is worth three points.<br> If a player gets into too much physical contact, they may be given free throws which are worth one point each. The game typically lasts for four-quarters and the team with the most points at the end of the four-quarters win the game. <br>If the score is tied at the end of the game, there will be additional play time, called overtime, to allow one team to win the match.</p>
+    </div>
+
+    <div class="co-info">
+        <h1> Coaching Timing </h1>
+    </div>
+
+    <div class="tab-info">
+        <center><table>
+            <thead>
+              <tr>
+                <th colspan="2">ACTIVITY</th>   
+                <th colspan="2">MORNING</th>
+                <th colspan="2">EVENING</th>
+                <th colspan="2">AGE</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2">7.00-9.00</td>
+                    <td colspan="2">4.00-6.00</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2">7.00-9.00</td>
+                <td colspan="2">4.00-6.00</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+          </table></center>
+    </div>
+
+
+    <div class="co-info">
+        <h1> Coaching Charges </h1>
+        <center><table class="charge">
+            <thead>
+                <tr>
+                  <th colspan="2">ACTIVITY</th>   
+                  <th colspan="2">FEES</th>
+                  <th colspan="2">AGE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2"> 12000</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2"> 7000</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+
+        </table></center>
+    </div>
+
+
+    <img src="{% static 'images/kabaddi.jpg' %}" alt="Your Image" style="background-size: 1180px 720px;">
+    <div class="infromation">
+    <p class="info">Kabaddi is a contact team sport played between two teams of seven players, originating in ancient India. <br> The objective of the game is for a single player on offense, referred to as a "raider", to run into the opposing team's half of the court, touch out as many of their players as possible, and return to their own half of the court, all without being tackled by the defenders in 30 seconds. <br> Points are scored for each player tagged by the raider, while the opposing team earns a point for stopping the raider. <br> Players are taken out of the game if they are touched or tackled, but return to the game after each point scored by their team from a tag or tackle. <br>
+
+        It is popular in the Indian subcontinent and other surrounding Asian countries. <br>Although accounts of kabaddi appear in the histories of ancient India, the game was popularised as a competitive sport in the 20th century. <br>It is the national sport of Bangladesh. It is the second most popular and viewed sport in India after cricket. <br>It is the state game of the Indian states of Andhra Pradesh, Bihar, Chhattisgarh, Haryana, Karnataka, Kerala, Maharashtra, Odisha, Punjab, Tamil Nadu, Telangana, and Uttar Pradesh</p>
+    </div>
+
+    <div class="co-info">
+        <h1> Coaching Timing </h1>
+    </div>
+
+    <div class="tab-info">
+        <table>
+            <thead>
+              <tr>
+                <th colspan="2">ACTIVITY</th>   
+                <th colspan="2">MORNING</th>
+                <th colspan="2">EVENING</th>
+                <th colspan="2">AGE</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2">7.00-9.00</td>
+                    <td colspan="2">4.00-6.00</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2">7.00-9.00</td>
+                <td colspan="2">4.00-6.00</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+
+    <div class="co-info">
+        <h1> Coaching Charges </h1>
+        <table>
+            <thead>
+                <tr>
+                  <th colspan="2">ACTIVITY</th>   
+                  <th colspan="2">FEES</th>
+                  <th colspan="2">AGE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2"> 12000</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2"> 7000</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+
+    <img src="{% static 'images/kho.jpg' %}" alt="Your Image" style="background-size: 1180px 720px;">
+    <div class="infromation">
+    <p class="info">Kho kho is a traditional Indian sport that dates back to ancient India. <br> It is the second-most popular traditional tag game in the Indian subcontinent after kabaddi. <br>Kho kho is played on a rectangular court with a central lane connecting two poles which are at either end of the court. <br> During the game, nine players from the chasing team (attacking team) are on the field, with eight of them sitting (crouched) in the central lane, while three runners from the defending team run around the court and try to avoid being touched. <br> Each sitting player on the chasing team faces the opposite half of the field that their adjacent teammates are facing.</p>
+    </div>
+
+    <div class="co-info">
+        <h1> Coaching Timing </h1>
+    </div>
+
+    <div class="tab-info">
+        <table>
+            <thead>
+              <tr>
+                <th colspan="2">ACTIVITY</th>   
+                <th colspan="2">MORNING</th>
+                <th colspan="2">EVENING</th>
+                <th colspan="2">AGE</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2">7.00-9.00</td>
+                    <td colspan="2">4.00-6.00</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2">7.00-9.00</td>
+                <td colspan="2">4.00-6.00</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+
+    <div class="co-info">
+        <h1> Coaching Charges </h1>
+        <table>
+            <thead>
+                <tr>
+                  <th colspan="2">ACTIVITY</th>   
+                  <th colspan="2">FEES</th>
+                  <th colspan="2">AGE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2"> 12000</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2"> 7000</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <img src="{% static 'images/table_tennis.jpg' %}" alt="Your Image" style="background-size: 1180px 720px;">
+    <div class="infromation">
+    <p class="info">Table tennis (also known as ping-pong or whiff-whaff) is a racket sport derived from tennis but distinguished by its playing surface being atop a stationary table, rather than the court on which players stand. <br> Either individually or in teams of two, players take alternating turns returning a light, hollow ball over the table's net onto the opposing half of the court using small rackets until they fail to do so, which results in a point for the opponent. <br>Play is fast, requiring quick reaction and constant attention, and is characterized by an emphasis on spin relative to other ball sports, which can heavily affect the ball's trajectory.</p>
+    </div>
+
+    <div class="co-info">
+        <h1> Coaching Timing </h1>
+    </div>
+
+    <div class="tab-info">
+        <table>
+            <thead>
+              <tr>
+                <th colspan="2">ACTIVITY</th>   
+                <th colspan="2">MORNING</th>
+                <th colspan="2">EVENING</th>
+                <th colspan="2">AGE</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2">7.00-9.00</td>
+                    <td colspan="2">4.00-6.00</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2">7.00-9.00</td>
+                <td colspan="2">4.00-6.00</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+
+    <div class="co-info">
+        <h1> Coaching Charges </h1>
+        <table>
+            <thead>
+                <tr>
+                  <th colspan="2">ACTIVITY</th>   
+                  <th colspan="2">FEES</th>
+                  <th colspan="2">AGE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2"> 12000</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2"> 7000</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <img src="{% static 'images/tennis.jpg' %}" alt="Your Image" style="background-size: 1180px 720px;">
+    <div class="infromation">
+    <p class="info">Tennis is a racket sport that is played either individually against a single opponent (singles) or between two teams of two players each (doubles). <br> Each player uses a tennis racket that is strung with cord to strike a hollow rubber ball covered with felt over or around a net and into the opponent's court.  <br>The object of the game is to manoeuvre the ball in such a way that the opponent is not able to play a valid return. <br>The player who is unable to return the ball validly will not gain a point,  while the opposite player will. <br>
+
+        Tennis is an Olympic sport and is played at all levels of society and at all ages. <br> The sport can be played by anyone who can hold a racket, including wheelchair users. <br>The original forms of tennis developed in France during the late Middle Ages. <br> The modern form of tennis originated in Birmingham, England, in the late 19th century as lawn tennis</p>
+    </div>
+
+    <div class="co-info">
+        <h1> Coaching Timing </h1>
+    </div>
+
+    <div class="tab-info">
+        <table>
+            <thead>
+              <tr>
+                <th colspan="2">ACTIVITY</th>   
+                <th colspan="2">MORNING</th>
+                <th colspan="2">EVENING</th>
+                <th colspan="2">AGE</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2">7.00-9.00</td>
+                    <td colspan="2">4.00-6.00</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2">7.00-9.00</td>
+                <td colspan="2">4.00-6.00</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+
+    <div class="co-info">
+        <h1> Coaching Charges </h1>
+        <table>
+            <thead>
+                <tr>
+                  <th colspan="2">ACTIVITY</th>   
+                  <th colspan="2">FEES</th>
+                  <th colspan="2">AGE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2"> 12000</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2"> 7000</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+
+    <img src="{% static 'images/turf.jpg' %}" alt="Your Image" style="background-size: 1180px 720px;">
+    <div class="infromation">
+    <p class="info"> It is a Condensed Version of Cricket. <br>Box cricket, also called turf box cricket , typically played in a smaller, defined area or ‘box’, hence the name. <br>It is a lot like traditional cricket in terms of gameplay and scoring, but it includes unique rules to adapt it to the limited playing area.</p>
+    </div>
+
+    <div class="co-info">
+        <h1> Coaching Timing </h1>
+    </div>
+
+    <div class="tab-info">
+        <center><table>
+            <thead>
+              <tr>
+                <th colspan="2">ACTIVITY</th>   
+                <th colspan="2">MORNING</th>
+                <th colspan="2">EVENING</th>
+                <th colspan="2">AGE</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2">7.00-9.00</td>
+                    <td colspan="2">4.00-6.00</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2">7.00-9.00</td>
+                <td colspan="2">4.00-6.00</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+          </table></center>
+    </div>
+
+
+    <div class="co-info">
+        <h1> Coaching Charges </h1>
+        <center><table>
+            <thead>
+                <tr>
+                  <th colspan="2">ACTIVITY</th>   
+                  <th colspan="2">FEES</th>
+                  <th colspan="2">AGE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2"> 12000</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2"> 7000</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+
+        </table></center>
+    </div>
+
+
+    <img src="{% static 'images/chess.jpg' %}" alt="Your Image" style="background-size: 1180px 720px;">
+    <div class="infromation">
+    <p class="info"> Chess is a board game for two players.<br>It is played on a square board, made up of 64 smaller squares, with eight squares in each row and column. <br>Each player starts with sixteen pieces: eight pawns, two knights, two bishops, two rooks, one queen and one king.<br> The goal of the game is for each player to try and checkmate the king of the opponent. <br>Checkmate is a threat ('check') to the opposing king which no move can stop. It ends the game.<br>
+
+        During the game, the two opponents take turns to move one of their pieces to a different square of the board. <br>One player ('White') has pieces of a light color; the other player ('Black') has pieces of a dark color. There are rules about how pieces move, and about taking the opponent's pieces off the board.<br> The player with white pieces always makes the first move.Because of this, White has a small advantage, and wins more often than Black in tournament games.</p>
+    </div>
+
+    <div class="co-info">
+        <h1> Coaching Timing </h1>
+    </div>
+
+    <div class="tab-info">
+        <table>
+            <thead>
+              <tr>
+                <th colspan="2">ACTIVITY</th>   
+                <th colspan="2">MORNING</th>
+                <th colspan="2">EVENING</th>
+                <th colspan="2">AGE</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2">7.00-9.00</td>
+                    <td colspan="2">4.00-6.00</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2">7.00-9.00</td>
+                <td colspan="2">4.00-6.00</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+
+    <div class="co-info">
+        <h1> Coaching Charges </h1>
+        <table>
+            <thead>
+                <tr>
+                  <th colspan="2">ACTIVITY</th>   
+                  <th colspan="2">FEES</th>
+                  <th colspan="2">AGE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2"> 12000</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2"> 7000</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+
+    <img src="{% static 'images/carrom.jpg' %}" alt="Your Image" style="background-size: 1180px 720px;">
+    <div class="infromation">
+    <p class="info">Carrom is a tabletop game of Indian origin in which players flick discs, attempting to knock them to the corners of the board. <br>The game is very popular in the Indian subcontinent, and is known by various names in different languages. <br> In South Asia, many clubs and cafés hold regular tournaments. <br>Carrom is very commonly played by families, including children, and at social functions. <br>Different standards and rules exist in different areas. <br>It became very popular in the United Kingdom and the Commonwealth during the early 20th century</p>
+    </div>
+
+    <div class="co-info">
+        <h1> Coaching Timing </h1>
+    </div>
+
+    <div class="tab-info">
+        <table>
+            <thead>
+              <tr>
+                <th colspan="2">ACTIVITY</th>   
+                <th colspan="2">MORNING</th>
+                <th colspan="2">EVENING</th>
+                <th colspan="2">AGE</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2">7.00-9.00</td>
+                    <td colspan="2">4.00-6.00</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2">7.00-9.00</td>
+                <td colspan="2">4.00-6.00</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+
+    <div class="co-info">
+        <h1> Coaching Charges </h1>
+        <table>
+            <thead>
+                <tr>
+                  <th colspan="2">ACTIVITY</th>   
+                  <th colspan="2">FEES</th>
+                  <th colspan="2">AGE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td colspan="2">YEARLY</td>
+                    <td colspan="2"> 12000</td>
+                    <td colspan="2">7 yrs & above</td>  
+                  </tr>
+              <tr>
+                <td colspan="2"> HALF YEARLY</td>
+                <td colspan="2"> 7000</td>
+                <td colspan="2">7 yrs & above</td>
+              </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+{% endblock %}

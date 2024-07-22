@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    /* Container styling */
+    .feedback-container {
+        margin: 50px auto;
+        padding: 20px;
+        width: 300px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form styling */
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    label {
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    textarea {
+        width: 250px;
+        height: 100px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: none;
+        /* Prevent resizing */
+    }
+
+    input {
+        padding: 5px 10px;
+        margin: 5px 0;
+    }
+
+    input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+
+<body>
+    <div class="feedback-container">
+        <center>
+            <h2>Send </h2>
+        </center>
+        <form action="" method="post" >
+            <div style="display: flex; flex-direction: column; justify-content: space-between; ">
+                {% csrf_token %}
+                <div>
+                    <label for="from">From : </label>
+                    <input type="text" value="{{request.user.username}}" readonly>
+                </div>
+                <div>
+                    <label for="from">To : </label>
+                    <input type="text" value="{{user_model.username}}" >
+                </div>
+                <div>
+                    <label for="feedback">Message:</label>
+                </div>
+                <div>
+                    <textarea id="feedback" name="message" required placeholder="Enter your message"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Send">
+
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+
+    <!-- <div>
+    <form action="" method="post" >
+        {% csrf_token %}
+    <label for="feedback">message:</label>
+	<textarea id="feedback" name="message" required style="height: 100px; width: 100px;"></textarea>
+    <input type="submit" value="Send" style="height: 20px; width: 50px;">
+    </form>
+</div> -->
+
+
+
+    {% endblock %}

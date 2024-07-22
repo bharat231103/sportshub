@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<style>
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.username {
+    font-weight: bold;
+    color: #007bff;
+}
+
+</style>
+<div class="container">
+    <h1>List of Players</h1>
+    {% for profile in profiles %}
+    <ul><li>
+
+        <a href="/plprofile?id={{profile.user.id}}"> 
+        <img src="{{profile.image.url}}" alt="Profile Image" width="50" height="50">
+        <li><span class="username">{{profile.user.username}}</span> 
+        </a> </li>
+    </li>
+    </ul>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

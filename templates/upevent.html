@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+
+  
+.container1{
+    width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  
+  .card {
+    /* height: 350px; */
+    width: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    flex: 0 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-content {
+    padding: 25px;
+  }
+  
+  .event-date {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .event-name {
+    margin-top: 20px;
+    font-size: 20px;
+    color: black;
+  }
+
+  .button{
+      padding: 10px 20px;
+      margin-top: 28px; 
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      /* text-decoration: none;
+      display: block; */
+
+      
+  }
+    .button:hover{
+        transition: transform 0.3s ease;
+        transform: translateY(-5px);
+
+    }
+  
+</style>
+<Center><h1 style="margin: 15px;"> Events</h1></Center>
+<center><h2> Organized by SportsHub Academy  </h2></center>
+{% for message in messages %}
+{% if message.tags == 'error' %}
+<div> <center><p style="color:red"> {{message}}</p></center>
+</div>
+{% endif %}
+{% endfor %}
+<div class="container1">
+  {% for event in events %}
+  <div class="card">
+    <div class="card-content">
+      <center><div class="event-date">{{event.date}}</div></center>
+      <hr>
+      <center><img src="{{event.image.url}}" alt="Cricket" style="height: 180px; width: 180px; margin-top: 10px;"></center>
+      <center><div class="event-name">{{event.name}}</div></center>
+      <center><button class="button" onclick="redirectToURL('/participate/?id={{event.id}}')"> Participate Now </button></center>
+    </div>
+  </div>
+  {% endfor %}
+ <div class="card">
+    <div class="card-content">
+      <div class="event-date">April 5, 2024</div>
+      <hr>
+      <center><img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/ping-pong-table-tennis-flyer-template-design-886eb2c6f38b9ff178edf00ecac542cd_screen.jpg?ts=1636982081" alt="tab" style=" height: 180px; width: 180px; margin-top: 10px;"></center>
+      <center><div class="event-name"> Table - Tennis</div></center>
+      <center><button class="button" onclick="redirectToURL('/participate/?id={{event.id}}')">Participate Now</a></center>
+    </div>
+ </div>
+ <div class="card">
+    <div class="card-content">
+      <div class="event-date">April 5, 2024</div>
+      <hr>
+      <center><img src="https://img.pikbest.com/origin/06/65/24/91FpIkbEsTwuB.jpg!bw700" alt="your image"  style=" height: 180px; width: 180px; margin-top: 10px;"></center>
+      <center><div class="event-name">Ultimate Soccer</div></center>
+      <center><button class="button" onclick="redirectToURL('/participate/?id={{event.id}}')">Participate Now</a></center>
+    </div>
+ </div>
+
+  </div>
+  <script>
+
+     function redirectToURL(url)  {
+      if (confirm("Do you want to confirm your participation?"))
+      {
+        window.location.href = url ;
+      }
+       
+    };
+  </script>
+
+
+
+
+{% endblock %}

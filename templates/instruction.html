@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="inst">
+    {% for message in messages %}
+    <div style="margin: 10px 0; background-color: white; padding: 20px 20px; width: 80%; border-radius: 10px; margin-left: 20px;">
+        <p>From : {{message.sender.username}}</p>
+        <p>Time : {{ message.date }}</p>
+        <hr>
+        <br>
+        <p>Message : {{message.message}}</p>
+    </div>
+    {% endfor %}
+    
+</div>
+
+
+{% endblock %}

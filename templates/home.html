@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+  .container1 {
+    width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  .card {
+    /* height: 350px; */
+    /* width: 200px; */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    flex: 0 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    padding: 5px 10px;
+    display: flex;
+
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-content {
+    padding: 10px 0px;
+
+  }
+
+  .event-date {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  .event-name {
+    margin-top: 20px;
+    font-size: 20px;
+    color: black;
+  }
+
+  .button {
+    padding: 10px 20px;
+    margin-top: 28px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    /* text-decoration: none;
+          display: block; */
+
+
+  }
+
+  .button:hover {
+    transition: transform 0.3s ease;
+    transform: translateY(-5px);
+
+  }
+  #feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+#feature .fe-box:hover {
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+
+#feature .fe-box img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+</style>
+<div class="uppper">
+
+  <video src="{% static 'images/vedio.mp4' %}" type="video/mp4" style=" width :100%; height:100%; margin-top: 3px;"
+    autoplay muted></video>
+</div>
+
+<div class="middle">
+  <h1 style=" margin-left: 10px; font-family: 'Montserrat', sans-serif; margin: 10px;"> Events </h1>
+  <div class="container1">
+    {% for event in events %}
+    <a class="card" href="/event" style="text-decoration: none;">
+      <div class="card-content">
+        <hr>
+        <div>
+          <img src="{{event.image.url}}" alt="Cricket"  style=" height: 400px; width: 280px;">
+        </div>
+        <center>
+          <div class="event-name">{{event.name}}</div>
+        </center>
+      </div>
+    </a>
+    {% endfor %}
+    <a class="card" href="/event" style="text-decoration: none;">
+      <div class="card-content">
+        <div>
+          <img
+            src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/ping-pong-table-tennis-flyer-template-design-886eb2c6f38b9ff178edf00ecac542cd_screen.jpg?ts=1636982081"
+            alt="tab" style=" height: 400px; width: 280px;">
+        </div>
+        <center>
+          <div class="event-name"> Table - Tennis</div>
+        </center>
+        <!-- <center><button class="button" onclick="redirectToURL('/participate/?id={{event.id}}')">Participate Now</a></center> -->
+      </div>
+    </a>
+    <!-- <a class="card" href="/event" style="text-decoration: none;">
+      <div class="card-content">
+
+        <div>
+          <img src="https://img.pikbest.com/origin/06/65/24/91FpIkbEsTwuB.jpg!bw700" alt="your image"
+            style=" height: 400px; width: 280px;">
+
+        </div>
+        <center>
+          <div class="event-name">Ultimate Soccer</div>
+        </center>
+        <!-- <center><button class="button" onclick="redirectToURL('/participate/?id={{event.id}}')">Participate Now</a></center> -->
+      </div>
+    </a> -->
+
+  </div>
+
+  <h1> food and beverages</h1>
+  <img src="{% static 'images/canteen.jpg' %}" alt="image" height="700px" width="100%" style="margin-top: 10px;" >
+  
+
+
+  <h1 style="margin: 15px;"> Availabilities</h1>
+  <section id="feature" class="section-p1">
+    <div class="fe-box">
+        <img src="{% static 'images/f1.png' %}" alt="">
+        <h6>Free available</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'images/f2.png' %}" alt="">
+        <h6>Online order Sports kit</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'images/f3.png' %}" alt="">
+        <h6>Save Money</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'images/f4.png' %}" alt="">
+        <h6>Promotion</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'images/f5.png' %}" alt="">
+        <h6>fitness</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'images/f6.png' %}" alt="">
+        <h6> 24/7 Support</h6>
+    </div>
+    
+</section>
+
+
+
+
+
+</div>
+
+{% endblock %}

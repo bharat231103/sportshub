@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+	<style>
+		body {
+            font-family: 'Montserrat', sans-serif;
+        }
+		.coach-block {
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+		.coach-photo {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-right: 20px;
+		}
+		.coach-info {
+			display: flex;
+			align-items: center;
+		}
+		.coach-name {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+		.coach-details {
+			margin-left: 20px;
+		}
+		.achievements {
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Book Your Coach Now</h1>
+	<div class="coach-block">
+		<div class="coach-info">
+			<!-- <img src="coach1_photo.jpg" alt="Coach 1 photo" class="coach-photo"> -->
+			<div class="coach-details">
+				<h2 class="coach-name">Coach 1 Name</h2>
+				<p><strong>Speciality:</strong> Speciality of Coach 1</p>
+				<p><strong>Experience:</strong> Number of years of experience of Coach 1</p>
+				<p><strong>Age:</strong> Age of Coach 1</p>
+			</div>
+		</div>
+		<h3 class="achievements">Achievements</h3>
+		<p>List of achievements of Coach 1</p>
+		<button>Book Now</button>
+	</div>
+	<div class="coach-block">
+		<div class="coach-info">
+			<img src="coach2_photo.jpg" alt="Coach 2 photo" class="coach-photo">
+			<div class="coach-details">
+				<h2 class="coach-name">Coach 2 Name</h2>
+				<p><strong>Speciality:</strong> Speciality of Coach 2</p>
+				<p><strong>Experience:</strong> Number of years of experience of Coach 2</p>
+				<p><strong>Age:</strong> Age of Coach 2</p>
+			</div>
+		</div>
+		<h3 class="achievements">Achievements</h3>
+		<p>List of achievements of Coach 2</p>
+		<button>Book Now</button>
+	</div>
+	<!-- Add more coach blocks as needed -->
+{% endblock %}

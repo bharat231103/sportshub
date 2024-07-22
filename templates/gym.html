@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <style>
+       .info{
+     font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    line-height: 32px;
+    color: #1e1e1e;
+    font-weight: 430;
+    letter-spacing: 1px;
+    margin-bottom: 13px;
+       }
+
+       .co-info{
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        margin: 50px;
+       }
+       table {
+              border-collapse: collapse;
+              width: 70%;
+              margin-bottom: 100px;
+            }
+          
+            th, td {
+              border: 1px solid black;
+              padding: 8px;
+              text-align: left;
+            }
+          
+            th {
+              background-color: #f2f2f2;
+            }
+          
+            tr:nth-child(even) {
+              background-color: #f2f2f2;
+            }
+          
+            tr:hover {
+              background-color: #ddd;
+            }
+    </style>
+<body>
+  <img src="{% static 'images/gym.jpg' %}" alt="Your Image" style="background-size: 1180px 720px;">
+    <div class="infromation">
+    <p class="info">Gyms are dedicated spaces for fitness and exercise that offer a wide range of equipment, classes, and resources to help individuals achieve their fitness goals. <br> They promote physical well-being, provide opportunities for social interaction, and offer a convenient and controlled environment for workouts. <br> Gyms cater to people of all fitness levels and ages, making them valuable assets in promoting a healthy and active lifestyle. </p>
+    <div class="co-info">
+        <h1> Timing & Charges</h1>
+    </div>
+
+    <div class="tab-info">
+        <center><table>
+            <thead>
+              <tr>
+                <th colspan="2">DAYS</th>   
+                <th colspan="2">MORNING</th>
+                <th colspan="2">EVENING</th>
+                <th colspan="2">ACTIVITY</th>
+                <th colspan="2">CHARGES</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">Mon - Sun</td>
+                    <td colspan="2">6.00 - 1.30</td>
+                    <td colspan="2">3.00 - 10.30</td>
+                    <td colspan="2"> YEARLY </td>
+                    <td colspan="2"> 4500</td>  
+                  </tr>
+                  <tr>
+                    <td colspan="2"></td>
+                    <td colspan="2"></td>
+                    <td colspan="2"></td>
+                    <td colspan="2"> HALF YEARLY</td>
+                    <td colspan="2"> 3000</td>  
+                  </tr>
+            </tbody>
+          </table></center>
+    </div>
+
+
+    </div>
+{% endblock %}

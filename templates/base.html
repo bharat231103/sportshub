@@ -1,0 +1,149 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="too">
+    <div class="logo-container">
+      <center><img src="{% static 'images/logo.jpg' %}" alt="myimage" style="height: 100px;" class="sport"></center>
+      <center>
+        <h1 class="head" style="margin-left: 40px;"> SportsHub Training Academy</h1>
+      </center>
+    </div>
+  </header>
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="{% url 'sports' %}"> Sports</a>
+      <div class="dropdown">
+        <button class="dropbtn"> Club
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/management">Management</a>
+          <a href="#">Privacy & Policy</a>
+          <a href="{% url 'feedback' %}">Help & Feedback</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"> Facilities
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="{% url 'gym' %}">Gym</a>
+          <a href="{% url 'library' %}">Library</a>
+          <a href="{% url 'medical' %}"> Medical Cell </a>
+        </div>
+      </div>
+
+
+
+      <div class="dropdown">
+        <button class="dropbtn"> Booking
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Ground</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"> Events
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/previous_event">Previous Events</a>
+          <a href="{% url 'event' %}">Upcoming Events</a>
+
+        </div>
+      </div>
+      {% if request.session.user_type == "player" %}
+      <a href="/inst"> Instruction <span class="fa fa-bell" id="notification-icon"></span>
+        <div id="notification-panel" style="display: none;">
+      </a>
+    </div>
+    {% endif %}
+
+    {% if request.session.user_type == "player" %}
+    <a href="{% url 'fee' %}"> Fees </a>
+
+    {% endif %}
+
+
+
+
+
+
+    {% if request.session.user_type == "coach" %}
+    <a href="/plstat"> Player Stats </a>
+    {% endif %}
+
+
+
+    <div class="dropdown">
+      <img src="{% static 'images/user.png' %}" alt="user" class="logo2">
+      <div class="dropdown-content">
+        <a href="{% url 'profile' %}">My Profile</a>
+        <a href="{% url 'profile' %}">Edit Profile</a>
+        <a href="#">Help</a>
+        <a href="/logout">Logout</a>
+      </div>
+    </div>
+
+    <!-- <a href="{% url 'add' %}" class="join-now-button" target="_blank"><span>Join Now </span></a> -->
+    </div>
+
+
+  
+
+
+
+
+
+  {% block content %}
+
+  {% endblock %}
+
+  <footer >
+    <div class="footer-content" >
+      <div class="quick-links">
+        <h3> Quick Links</h3>
+        <a href="/"> <i class="fa fa-chevron-right"></i> Home</a>
+        <a href="/sport"><i class="fa fa-chevron-right"></i> Sports</a>
+        <a href="/management"><i class="fa fa-chevron-right"></i> Management</a>
+        <a href="/inst"> <i class="fa fa-chevron-right"></i> Instruction</a>
+        <a href="/event"><i class="fa fa-chevron-right"> </i> Events</a>
+      </div>
+      <div class="contact-info">
+        <h3>Contact us</h3>
+        <p>Ambadi Road, near Vartak college,<br>
+          Chai Nation, 60 feet, Vasai West, Palghar,<br>
+          Maharashtra 401209.</p>
+        <p>02235244200/02235244110</p>
+        <p><a href="mailto:mail@gsc.in">bharat@123gmail.com</a></p>
+      </div>
+      <div class="social-networking">
+        <h3> Social Media</h3>
+        <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i> FACEBOOK</a>
+        <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i> INSTAGRAM</a>
+        <a href="#" class="youtube"><i class="fa-brands fa-youtube"></i>YOUTUBE</a>
+        <a href="#" class="youtube"><i class="fa-brands fa-twitter"></i>Twitter</a>
+
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 SHA. Privacy Policy + T&C</p>
+    </div>
+  </footer>
+</body>
+
+</html>

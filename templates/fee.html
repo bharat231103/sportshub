@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+   
+ <style>
+  .pay{
+    height: 300px;
+    padding: 25px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    gap: 20px;
+   
+    
+    /* text-align: center; */
+
+  }
+  .use{
+      font-size: 20px;
+      padding:10px;
+  }
+  input[type ="text"]{
+
+    height: 20px;
+    padding: 15px;
+  }
+  .amt{
+    font-size: 20px;
+    padding: 10px;
+  }
+  .sp{
+    font-size: 20px;
+    margin-right: 100px;
+    padding: 10px;
+
+  }
+  .ch{
+    margin-left: 20px;
+    padding: 10px;
+  }
+</style>
+  
+      
+      <form  method="POST" class="pay">
+        <h2> Pay your Club fees Here!</h2>
+        <hr>
+        <table>
+          <tr>
+            <td>
+              <label for="id_username">Username:</label>
+            </td>
+            <td>
+              <input type="text" id="id_username" name="username">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="id_sport_choice">Sport:</label>
+            </td>
+            <td>
+              <select id="id_sport_choice" name="sport_choice" onchange="getValue()" class="ch">
+                <option value="cricket">Cricket</option>
+                <option value="football">Football</option>
+                <option value="kabaddi">Kabaddi</option>
+                <option value="chess">chess</option>
+                <option value="table_tennis">Table_tennis</option>
+                <option value="lawn_tennis">Lawn_Tennis</option>
+                <option value="kho-kho">kho-kho</option>
+                <option value="turf">Turf</option>
+            </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="id_amount_to_pay">Amount:</label>
+            </td>
+            <td>
+              <input type="text" id="id_amount_to_pay" name="amount_to_pay">
+            </td>
+          </tr>
+        </table>
+        {% csrf_token %}
+        
+        <script>
+          function getValue() {
+             var selectElement = document.getElementById("id_sport_choice");
+             var selectedValue = selectElement.value;
+             var sportPrices = {
+            'cricket': 15000.00, 
+            'football': 15000.00 ,
+            'kabaddi': 15000.00,
+            'basketball': 15000.00,
+            'chess': 15000,
+            'table_tennis': 15000.00,
+            'lawn_tennis': 15000.00,
+            'kho_kho':15000.00,
+            'turf': 15000.00,
+            
+
+            
+        };
+          document.getElementById("id_amount_to_pay").value=sportPrices[
+                selectedValue 
+              ]
+
+             }
+
+       </script>
+
+      
+
+       <script
+
+       src="https://checkout.razorpay.com/v1/checkout.js"
+       data-key="rzp_test_aWJEEFVRMQXO35"
+       data-amount="1500000"
+       data-currency="INR"
+       data-order_id="{{payment.id}}"
+       data-buttontext="Pay Now"
+       data-name="Your Sports Club"
+       data-description="Sports Club Membership Fee"
+       data-prefill.name="Owner Bharat"
+       data-prefill.email="your_email@example.com"
+       data-theme.color="#F37254"
+     >
+     
+     </script>
+
+     
+  </form>
+ 
+
+
+{% endblock %}

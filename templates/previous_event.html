@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<style>
+    .container1{
+    width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  
+  .card {
+    /* height: 350px; */
+    width: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    flex: 0 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-content {
+    padding: 25px;
+  }
+  
+  .event-date {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .event-name {
+    margin-top: 20px;
+    font-size: 20px;
+    color: black;
+  }
+
+  .button{
+      padding: 10px 20px;
+      margin-top: 28px; 
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      /* text-decoration: none;
+      display: block; */
+
+      
+  }
+    .button:hover{
+        transition: transform 0.3s ease;
+        transform: translateY(-5px);
+
+    }
+</style>
+<div class="container1">
+    {% for event in events %}
+    <div class="card">
+      <div class="card-content">
+        <center><div class="event-date">{{event.event.date}}</div></center>
+        <hr>
+        <center><img src="{{event.event.image.url}}" alt="Cricket" style="height: 180px; width: 180px; margin-top: 10px;"></center>
+        <center><div class="event-name">{{event.event.name}}</div></center>
+        <center><button class="button" onclick="redirectToURL('/remove_participation/?id={{event.event.id}} ')"> Remove  </button></center>
+      </div>
+    </div>
+    {% endfor %}
+
+</div>
+<script>
+
+    function redirectToURL(url)  {
+     if (confirm("Do you want to remove your Participation?"))
+     {
+       window.location.href = url ;
+     }
+      
+   };
+ </script>
+
+
+{% endblock %}

@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .info{
+   font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  line-height: 32px;
+  color: #1e1e1e;
+  font-weight: 430;
+  letter-spacing: 1px;
+  margin-bottom: 13px;
+     }
+
+     .co-info{
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      margin: 50px;
+     }
+     table {
+            border-collapse: collapse;
+            width: 70%;
+          }
+        
+          th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+          }
+        
+          th {
+            background-color: #f2f2f2;
+          }
+        
+          tr:nth-child(even) {
+            background-color: #f2f2f2;
+          }
+        
+          tr:hover {
+            background-color: #ddd;
+          }
+
+.cr1{
+      display: flex;
+      flex-wrap: wrap;
+      
+      
+}
+.card {
+            width: 300px;
+            border: 1px solid #ccc;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px;
+        }
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .card-description {
+            margin: 0;
+            font-size: 16px;
+            display: inline-block;
+            width: 180px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+  </style>
+
+
+  {% if page == 0 %} 
+  <div class="cr1">
+{% for sport in sports %}
+<div class="card">
+  <img class="card-image" src="{{sport.image.url}}" alt="Cricket Image">
+  <div class="card-content">
+      <h2 class="card-title">{{sport.name}}</h2>
+      <p class="card-description" style="margin-top: 20px;">{{sport.description}}</p><br>
+      <a href="/sport/?page={{sport.name}}">Read more..</a>
+      
+  </div>
+</div>
+
+
+{% endfor %}
+</div>
+
+
+
+{% else %}
+
+<img src="{{sport.image.url}}" alt="Your Image" style="background-size: 1180px 720px;">
+<div class="infromation">
+<h1 class="info" style="text-indent: 5px;">{{sport.description}}</h1>
+</div>
+
+<div class="co-info">
+    <h1> Coaching Timing  </h1>
+</div>
+
+<div class="tab-info">
+    <center><table>
+        <thead>
+          <tr>
+            <th colspan="2">ACTIVITY</th>   
+            <th colspan="2">MORNING</th>
+            <th colspan="2">EVENING</th>
+            <th colspan="2">AGE</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">YEARLY</td>
+                <td colspan="2">7.00-9.00</td>
+                <td colspan="2">4.00-6.00</td>
+                <td colspan="2">7 yrs & above</td>  
+              </tr>
+          <tr>
+            <td colspan="2"> HALF YEARLY</td>
+            <td colspan="2">7.00-9.00</td>
+            <td colspan="2">4.00-6.00</td>
+            <td colspan="2">7 yrs & above</td>
+          </tr>
+        </tbody>
+      </table>
+</div></center>
+
+
+<div class="co-info">
+    <h1> Coaching Charges </h1>
+   <center> <table>
+        <thead>
+            <tr>
+              <th colspan="2">ACTIVITY</th>   
+              <th colspan="2">FEES</th>
+              <th colspan="2">AGE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td colspan="2">YEARLY</td>
+                <td colspan="2"> 12000</td>
+                <td colspan="2">7 yrs & above</td>  
+              </tr>
+          <tr>
+            <td colspan="2"> HALF YEARLY</td>
+            <td colspan="2"> 7000</td>
+            <td colspan="2">7 yrs & above</td>
+          </tr>
+        </tbody>
+
+    </table>
+</div></center>
+{% endif %}
+
+
+{% endblock %}
